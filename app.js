@@ -5,7 +5,7 @@ const geoCoord = require("./utils/geocode");
 const forecast = require("./utils/forecast");
 
 const app = express();
-
+const port = process.env.PORT || 5000;
 const publicPath = path.join(__dirname, "public/");
 const viewsPath = path.join(__dirname, "templates/views");
 const partialsPath = path.join(__dirname, "templates/partials");
@@ -90,6 +90,6 @@ app.get("*", (req, res) => {
   });
 });
 
-app.listen(5000, () => {
-  console.log("Server 5000");
+app.listen(port, () => {
+  console.log("Server " + port);
 });
