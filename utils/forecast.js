@@ -15,9 +15,11 @@ const forecast = (lat, lng, location, callback) => {
         data.weather_descriptions[0] +
           ". It is currently " +
           data.temperature +
-          " degrees out. There is a " +
+          " degrees out. It feels like " +
           data.feelslike +
-          "% chance of rain."
+          " degrees out. The humidity is " +
+          data.humidity +
+          "%."
       );
     }
   });

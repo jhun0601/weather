@@ -55,6 +55,8 @@ a:focus {
 .portrait {
   max-width: 250px;
   max-height: 250px;
+  border-radius: 50%;
+  text-align: center;
 }
 
 input {
