@@ -8,8 +8,6 @@ weatherForm.addEventListener("submit", (e) => {
   messageOne.textContent = "Loading . . . ";
   result.textContent = "";
   fetch("/weather?address=" + search.value).then((response) => {
-    console.log(port);
-    console.log(url);
     response.json().then((data) => {
       if (data.error) {
         messageOne.textContent = data.error;
